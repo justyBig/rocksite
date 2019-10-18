@@ -1,0 +1,42 @@
+// Placeholder text styles
+// makes input placeholder text the specified color then makes it disappear on focus
+// to use put "@include input-placeholder([hex code or variable for color])" on any input
+// for example: @include input-placeholder(#c5c5c5);
+@mixin input-placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  // clear placeholder on focus
+  &:focus::-webkit-input-placeholder { color:transparent; }
+  &:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+  &:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+  &:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+}
+
+// Clearfix 
+// makes a parent div expand to wrap all floated elements
+// to use, add "@include clearfix" to a container
+@mixin clearfix { 
+  &:after {
+    visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;
+  }
+}
+
+// Stretch Children
+// makes all child divs stretch to the same height, for Safari/IE depends on parent container having a set height
+// to use, add "@include stretchChildren" to the parent element
+@mixin stretchChildren {
+  @include display(flex); 
+  @include flex-wrap(wrap);
+  @include align-items(stretch);
+}
+

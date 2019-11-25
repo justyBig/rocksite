@@ -86,3 +86,11 @@ function arphabet_widgets_init() {
 
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+/*************************************************************/
+/*  OPTIONS PAGE                   */
+/***********************************************************/
+
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page();
+}

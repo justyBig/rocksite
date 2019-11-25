@@ -26,17 +26,28 @@
 			<header role="banner" class="header">
 				<a class="screen-reader-text skip-link" href="#main">Skip to content</a>
 				<div class="logo">
+                    <?php
+                    $logo = get_field('site_logo','options');
+                    if ($logo){
+                        $logoUrl = $logo['url'];
+                        $logoAlt = $logo['url'] ?: 'Logo';
+                        $logoTitle = $logo['title'] ?: 'Site Logo';
+
+                    }
+                    ?>
 					<!-- alter the following image src attribute to pull in your logo (or add an image field called 'logo' to the ACF options page) -->
-					<a href="<?php bloginfo('url'); ?>"><img alt="logo" src="logo.png" />logo</a>					
+					<a href="<?php bloginfo('url'); ?>">
+                        <img title="<?php echo $logoTitle; ?>" alt="<?php echo $logoAlt?>" src="<?php echo $logoUrl;?>" />
+                    </a>
 				</div>
 
-				<div class="search">
-					<form method="get" id="searchform" class="searchform" action="<?php bloginfo('url'); ?>/">
-						<input type="text" value="" name="s" id="s" placeholder="Search&hellip;"/>
-						<input type="hidden" name="search-type" value="normal" />
-						<input name="submit" type="submit" value="Go" />
-					</form>
-				</div>
+<!--				<div class="search">-->
+<!--					<form method="get" id="searchform" class="searchform" action="--><?php //bloginfo('url'); ?><!--/">-->
+<!--						<input type="text" value="" name="s" id="s" placeholder="Search&hellip;"/>-->
+<!--						<input type="hidden" name="search-type" value="normal" />-->
+<!--						<input name="submit" type="submit" value="Go" />-->
+<!--					</form>-->
+<!--				</div>-->
 
 				<div class=" nav">
 					<nav role="navigation" class="mainNav">

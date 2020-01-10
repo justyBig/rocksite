@@ -38,7 +38,7 @@ var input_custom_js =   [
                         ];
 var input_vendor_js =  [
                             './src/vendor/js/**/*.js', // 1 - used as a catch-all. This will add all .js files located within src/vendor/js/ to be compiled and minfied.
-                            // './src/vendor/js/**/slick.js', // 2 - FOR DEPENDENCIES - if you want to control your enqueue order, manually add each file in the order you'd like
+                             './src/vendor/js/**/slick.js', // 2 - FOR DEPENDENCIES - if you want to control your enqueue order, manually add each file in the order you'd like
                         ];
 
 

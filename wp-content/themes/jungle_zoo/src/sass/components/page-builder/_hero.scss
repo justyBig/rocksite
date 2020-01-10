@@ -1,0 +1,20 @@
+.hero-section {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 726px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+  .container {
+margin: 0 5% 0 auto;
+  p {
+    max-width: 443px;
+    text-align: left;
+    margin: 0 auto;
+    line-height: 32px;
+  }
+}
+}

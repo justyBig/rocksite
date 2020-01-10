@@ -14,7 +14,7 @@
 @mixin default-font {
   font-family: Arial;
   font-weight: $normal;
-  color: $black;
+  color: $darkBlue;
 }
 
 @mixin headline-font {
@@ -22,3 +22,97 @@
   font-weight: $bold;
   color: $black;
 }
+@mixin default-heading {
+  font-family: 'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
+  font-weight: $bold;
+  color: $black;
+}
+
+
+/***** HEADING MIXINS *****/
+@mixin h1($color: $black) {
+  @include default-heading($color);
+  font-size: 42px;
+  margin: 0.15em 0 0.35em;
+  font-weight: bold;
+  line-height: 50px;
+  @media screen and (max-width:$tablet){
+    font-size:28px;
+    line-height: 30px;
+
+  }
+}
+
+@mixin h2($color: $black) {
+  @include default-heading($color);
+  font-size: 28px;
+  margin: 0.15em 0 0.35em;
+  font-weight: bold;
+  @media screen and (max-width:$mobile){
+    font-size:18px;
+  }
+}
+//used for an h2 with a span/tagline inside
+// <h2><span>tagline</span>Main title</h2>
+@mixin h2wtag{
+  text-align: center;
+  color: $navy;
+  margin-bottom: 45px;
+  line-height: 38px;
+  @media(max-width: $mobile){
+    font-size: 18px;
+    line-height: 28px;
+  }
+  span{
+    display: block;
+    font-size: 12px;
+    font-weight: $bold;
+    text-transform: uppercase;
+    @media(max-width: $mobile){
+      font-size: 10px;
+    }
+  }
+}
+
+
+@mixin h3($color: $black) {
+  @include default-heading($color);
+  font-size: 26px;
+  margin: 0.1em 0 0.3em;
+  @media screen and (max-width:$mobile){
+    font-size:12px;
+  }
+}
+
+@mixin h4($color: $black) {
+  @include default-heading($color);
+  font-size: 28px;
+  margin: 0.1em 0 0.3em;
+  line-height: 30px;
+  @media screen and (max-width:$mobile){
+    font-size:24px;
+  }
+}
+
+// todo: set h5
+@mixin h5($color: $black) {
+  @include default-heading($color);
+  font-size: 21px;
+  margin: 0.05em 0 0.25em;
+
+  @media screen and (max-width:$mobile){
+    font-size:18px;
+  }
+}
+
+// todo: set h6
+@mixin h6($color: $black) {
+  @include default-heading($color);
+  font-size: 18px;
+  margin: 0.05em 0 0.25em;
+
+  @media screen and (max-width:$mobile){
+    font-size:16px;
+  }
+}
+

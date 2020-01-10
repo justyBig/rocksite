@@ -1,4 +1,3 @@
-
 $sidebar-layout: (
         columns: 3,
         gutter: 40px,
@@ -8,7 +7,6 @@ $product-gallery: (
         columns: 4,
         gutter: 40px,
 );
-
 .sidebar-layout {
   @include grid-container;
 }
@@ -24,9 +22,47 @@ $product-gallery: (
 .product-gallery {
   @include grid-collapse($product-gallery);
   @include grid-container;
+  @include stretchChildren
 }
 
 .product-gallery__item {
   @include grid-column(1, $product-gallery);
+  @include shadow;
   margin-bottom: 1rem;
+
+  a {
+    text-decoration: none;
+    @include default-font;
+
+    .image-wrapper {
+      @include aspect-ratio(275px, 188px);
+
+      .featImg {
+      }
+    }
+
+    h2 {
+      padding: 20px;
+    }
+
+    p {
+      @include default-font;
+      color: $darkBlue !important;
+
+      padding: 20px;
+    }
+  }
+
+  .blogCategories {
+    display: flex;
+    flex-flow: wrap;
+    padding: 15px;
+
+    a {
+      @include button-bg($mint);
+      flex: 0 0 auto;
+      margin: 5px;
+      color: $teal;
+    }
+  }
 }

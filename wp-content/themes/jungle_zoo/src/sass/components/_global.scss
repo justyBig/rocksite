@@ -20,3 +20,15 @@ a[href^="tel:"] {
 		pointer-events: none;
 	}
 }
+
+.container {
+	position: relative;
+	max-width: $container;
+	padding: 0 $site_container_padding;
+	margin: 0 auto;
+
+	@media (max-width: $mobile) {
+		max-width: $container_mobile;
+		padding: 0 $site_container_padding_mobile;
+	}
+}

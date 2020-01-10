@@ -1,0 +1,13 @@
+.image-section {
+  padding: 50px 0 125px 0;
+  .container {
+    @include aspect-ratio(500px, 500px);
+
+    img {
+      width: 100%;
+      max-width: 900px;
+      display: block;
+      margin: 94px auto;
+    }
+  }
+}

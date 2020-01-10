@@ -1,0 +1,18 @@
+#main {
+  section.hero {
+    background-color: $teal;
+
+    .hero-fade-slider {
+      overflow: hidden;
+      margin: 0 auto;
+      max-width: 75%;
+
+      div {
+
+        box-shadow: 0 0 8px 8px $teal;
+        .fade-slide {
+        }
+      }
+    }
+  }
+}

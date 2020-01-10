@@ -1,0 +1,53 @@
+.animals {
+  padding: 35px 0;
+  background-color: $lightGreen;
+  .cardDeck {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    @include stretchChildren;
+
+    .card {
+      @include shadow;
+      margin-bottom: 1rem;
+      flex: 0 0 30%;
+      background-color: $white;
+
+      a {
+        text-decoration: none;
+        @include default-font;
+
+        .image-wrapper {
+          @include aspect-ratio(275px, 188px);
+
+          .featImg {
+          }
+        }
+
+        h2 {
+          padding: 20px;
+        }
+
+        p {
+          @include default-font;
+          color: $darkBlue !important;
+
+          padding: 20px;
+        }
+      }
+
+      .blogCategories {
+        display: flex;
+        flex-flow: wrap;
+        padding: 15px;
+
+        a {
+          @include button-bg($mint);
+          flex: 0 0 auto;
+          margin: 5px;
+          color: $teal;
+        }
+      }
+    }
+  }
+}

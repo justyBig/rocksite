@@ -1,0 +1,121 @@
+footer {
+  overflow: hidden;
+  padding: 58px 0 0 0;
+  background-color: $green;
+  width: 100%;
+  #fields {
+    background-color: $black;
+    position: relative;
+
+    .flexWrap {
+      display: flex;
+      align-items: center;
+      color: $white;
+      padding: 53px 0 24px 0;
+      @media (max-width: $mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 39px 0;
+      }
+
+      .leftTxt {
+
+        @media (max-width: $mobile) {
+          margin: 0 0 14px 0;
+        }
+
+        .titleTxt {
+          width: 400px;
+          font-size: 38px;
+          color: $white;
+          @media (max-width: $mobile) {
+            font-size: 24px;
+            width: 182px;
+          }
+
+          .lightBlue {
+            display: block;
+            color: $mint;
+          }
+        }
+      }
+
+      .centerButton {
+      }
+    }
+
+    img {
+      position: absolute;
+      right: -78px;
+      bottom: -43px;
+      @media (max-width: $mobile) {
+        right: -98px;
+      }
+    }
+  }
+
+  #navLinks {
+    background-color: $mint;
+    color: $white;
+    padding: 24px 0;
+    @media (max-width: $mobile) {
+      padding: 35px 0;
+    }
+
+    .flexWrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $white;
+      @media (max-width: $mobile) {
+        flex-direction: column;
+      }
+
+      .menu-footer-container {
+
+        .menu {
+          list-style: none;
+          display: flex;
+          flex-wrap: nowrap;
+          width: 390px;
+          justify-content: space-between;
+          @media (max-width: $mobile) {
+            flex-direction: column;
+            align-items: center;
+            margin: 36px 0 0 0;
+          }
+
+          li {
+            @media (max-width: $mobile) {
+              margin: 0 0 15px 0;
+              &:last-of-type {
+                margin: 0;
+              }
+            }
+
+            a {
+              text-transform: uppercase;
+              font-size: 12px;
+              color: $white;
+              text-decoration: none;
+              font-weight: $bold;
+            }
+
+          }
+        }
+      }
+    }
+
+  }
+
+  #copyright {
+    padding: 14px 0 7px 0;
+    color: $white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    @media (max-width: $mobile) {
+      font-size: 10px;
+    }
+  }
+}

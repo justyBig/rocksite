@@ -7,7 +7,10 @@ Text Domain:
 
 
 //Ljibraries
-@import 'libraries/_neat';
+@import 'libraries/_neat.scss';
+@import "libraries/bourbon/bourbon.scss";
+@import 'libraries/_slick';
+@import 'libraries/_slick-theme';
 
 
 // global and utilties
@@ -17,4 +20,13 @@ Text Domain:
 @import 'components/_mixins';
 @import 'components/_global';
 @import 'components/_archive';
+@import 'components/_animals.scss';
+@import 'components/_footer';
+@import 'components/_default-template';
 
+
+// Page Builder
+@import 'components/page-builder/_hero';
+@import 'components/page-builder/_content-block';
+@import 'components/page-builder/_animal-cards';
+@import 'components/page-builder/_image-block';

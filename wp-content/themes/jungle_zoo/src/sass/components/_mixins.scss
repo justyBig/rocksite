@@ -16,18 +16,34 @@
     color: $color;
   }
   // clear placeholder on focus
-  &:focus::-webkit-input-placeholder { color:transparent; }
-  &:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
-  &:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
-  &:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+  &:focus:-moz-placeholder {
+    color: transparent;
+  }
+  /* FF 4-18 */
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+  /* FF 19+ */
+  &:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+  /* IE 10+ */
 }
 
 // Clearfix 
 // makes a parent div expand to wrap all floated elements
 // to use, add "@include clearfix" to a container
-@mixin clearfix { 
+@mixin clearfix {
   &:after {
-    visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
   }
 }
 
@@ -35,8 +51,84 @@
 // makes all child divs stretch to the same height, for Safari/IE depends on parent container having a set height
 // to use, add "@include stretchChildren" to the parent element
 @mixin stretchChildren {
-  @include display(flex); 
+  @include display(flex);
   @include flex-wrap(wrap);
   @include align-items(stretch);
 }
 
+//maintain image ratio
+//add this mixin to an image wrapper
+//eg <div class="image-wrapper"><img src=""></div>
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@mixin button-bg($bg) {
+  background: $bg;
+  color: $white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  &:hover {
+    background: darken($bg, 8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background: darken($bg, 25%);
+  }
+}
+//box shadow
+@mixin shadow{
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.16);
+}
+//global container
+@mixin container{
+  position:relative;
+  max-width:$container;
+  padding: 0 $site_container_padding;
+  margin:0 auto;
+
+  @media (max-width:$mobile) {
+    max-width:$container_mobile;
+    padding:0 $site_container_padding_mobile;
+  }
+}
+
+//used for an h2 with a span/tagline inside
+// <h2><span>tagline</span>Main title</h2>
+@mixin h2wtag{
+  text-align: center;
+  color: $darkBlue;
+  margin-bottom: 45px;
+  line-height: 38px;
+  @media(max-width: $mobile){
+    font-size: 18px;
+    line-height: 28px;
+  }
+  span{
+    display: block;
+    font-size: 12px;
+    font-weight: $bold;
+    text-transform: uppercase;
+    @media(max-width: $mobile){
+      font-size: 10px;
+    }
+  }
+}

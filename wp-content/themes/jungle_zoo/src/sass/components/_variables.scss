@@ -1,5 +1,11 @@
 $white: #fff;
 $black: #222;
+/* RGB */
+$darkBlue: rgba(0, 78, 100, 1);
+$teal: rgba(0, 165, 207, 1);
+$mint: rgba(159, 255, 203, 1);
+$green: rgba(37, 161, 142, 1);
+$lightGreen: rgba(122, 229, 130, 1);
 
 $light: 300;
 $normal: 400;
@@ -10,3 +16,15 @@ $mobile: 768px;
 $tablet: 1024px;
 $medium-screens: 1200px;
 $large-screens: 1400px;
+
+
+
+/*** CONTAINER VARS ***/
+// Creates a content container with built-in padding so your content is always off the edge of the window in a centrally controlled location
+$site_container: 1084px; // the max width of the content, not including padding
+// Global content padding from container
+$site_container_padding: 30px; // Desktop
+$site_container_padding_mobile: 23px; // Mobile (rec: percentage)
+// Define container using calc - allows for easy changes to individual container elements
+$container: calc(#{$site_container} + (#{$site_container_padding} * 2)); // Desktop
+$container_mobile: calc(#{$site_container} + (#{$site_container_padding_mobile} * 2)); // Mobile

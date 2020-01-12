@@ -5,7 +5,6 @@ Author URI:
 Text Domain:
 */
 
-
 //Ljibraries
 @import 'libraries/_neat.scss';
 @import "libraries/bourbon/bourbon.scss";
@@ -30,3 +29,6 @@ Text Domain:
 @import 'components/page-builder/_content-block';
 @import 'components/page-builder/_animal-cards';
 @import 'components/page-builder/_image-block';
+@import 'components/page-builder/_relationship';
+@import 'components/page-builder/_pull_latest_animals';
+@import 'components/page-builder/_get_animal_by_tax_term';

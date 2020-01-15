@@ -1,4 +1,5 @@
 <section class="animals">
+    <h2><span>Flex Content</span>animal cards Post Object</h2>
     <div class="container">
         <?php $post_objects = get_sub_field('animals');
         if ($post_objects): ; ?>
@@ -31,6 +32,9 @@
                     </div>
                 <?php endforeach; ?>
             </div>
+        <div class="button">
+            <a href="/animals">VIEW ALL</a>
+        </div>
         <?php wp_reset_postdata();
         endif; ?>
     </div>

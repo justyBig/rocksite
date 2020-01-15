@@ -1,6 +1,8 @@
 <?php
-if (have_posts()):
-    while (have_posts()): the_post();
+get_header();
+if (have_posts()):?>
+    <div class="container">
+    <?php while (have_posts()): the_post();
         $animals = get_field('animal_habitat'); ?>
         <a href="<?php the_permalink(); ?>"
            title="<?php the_title_attribute(); ?>">
@@ -24,5 +26,7 @@ if (have_posts()):
                 <?php endif; ?>
             </div>
         </section>
-    <?php endwhile;
-endif;
+    <?php endwhile;?>
+    </div>
+<?php endif;
+get_footer();

@@ -2,6 +2,7 @@
 get_header();
 ?>
     <section class="animals">
+        <h2><span>Taxonomy</span>Custom Taxonomy template</h2>
         <div class="container">
             <?php if (have_posts()): ; ?>
                 <div class="cardDeck">

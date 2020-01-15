@@ -1,6 +1,9 @@
 .relationship {
   padding: 35px 0;
   background-color: $lightGreen;
+  h2{
+    @include h2wtag;
+  }
   .cardDeck {
     display: flex;
     flex-flow: wrap;

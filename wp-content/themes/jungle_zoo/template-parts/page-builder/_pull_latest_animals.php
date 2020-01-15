@@ -1,6 +1,6 @@
 <section class="latestThree">
     <div class="container">
-        <h1>Latest animals module</h1>
+        <h2><span>Flex Content</span>Latest animals by selected Tax</h2>
         <?php
         // the query
         $the_query = new WP_Query(array(

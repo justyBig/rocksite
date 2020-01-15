@@ -2,7 +2,8 @@
 .latestThree{
   background-color: $white;
   .container{
-    h1{
+    h2{
+      @include  h2wtag;
       color: $teal;
     }
   }

@@ -47,10 +47,6 @@ get_header();
                                 <?php endforeach; ?>
                             </ul>
                         <?php endif; ?>
-                        <h2>Archives by Subject:</h2>
-                        <ul>
-                            <?php wp_list_categories(); ?>
-                        </ul>
                     </div>
                     <div class="sidebar-layout__main">
                         <div class="product-gallery">
